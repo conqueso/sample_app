@@ -77,4 +77,8 @@ SampleApp::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+  
+  # Make URLs work in mailers
+  config.action_mailer.default_url_options = { :host => "http://hidden-bastion-1703.herokuapp.com/" }
+  
 end
